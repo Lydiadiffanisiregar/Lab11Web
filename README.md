@@ -5,7 +5,7 @@ Repository ini dibuat untuk memenuhi tugas Pemrograman Web
 | NIM     | 312010498       |
 | Kelas   | TI.20.A.1        |
 
-Langkah-langkah Praktikum
+# Langkah-langkah Praktikum
 Sebelum memulai menggunakan Framework Codeigniter, perlu dilakukan konfigurasi pada webserver. Beberapa ekstensi PHP perlu diaktifkan untuk kebutuhan pengembangan Codeigniter 4. Berikut beberapa ekstensi yang perlu diaktifkan:
 • php-json ekstension untuk bekerja dengan JSON;
 • php-mysqlnd native driver untuk MySQL;
@@ -18,7 +18,7 @@ Untuk mengaktifkan ekstentsi tersebut, melalu XAMPP Control Panel, pada bagian A
 ![foto](foto/1.png)
 
 Setelah klik PHP(php.ini), pada bagian extention, hilangkan tanda ; (titik koma) pada ekstensi yang akan diaktifkan. Kemudian simpan kembali filenya dan restart Apache web server.
-![foto](foto/1.PNG)
+![foto](foto/2.PNG)
 
 Instalasi Codeigniter 4
 Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu cara manual dan menggunakan composer. Pada praktikum ini kita menggunakan cara manual.
