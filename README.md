@@ -72,7 +72,7 @@ app/Controller/Home.php hilangkan titik koma pada akhir kode.
 
 # Struktur Direktori
 Untuk lebih memahami Framework Codeigniter 4 perlu mengetahui struktur direktori
-dan file yang ada. Buka pada Windows Explorer atau dari Visual Studio Code ->
+dan file yang ada. Buka pada <strong> Windows Explorer </strong> atau dari Visual Studio Code ->
 Open Folder.
 
  <p> Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya. </p>
