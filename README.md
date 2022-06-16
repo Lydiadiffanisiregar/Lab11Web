@@ -28,7 +28,7 @@ Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu c
 • Unduh Codeigniter dari website https://codeigniter.com/download
 • Extrak file zip Codeigniter ke direktori htdocs/lab11_php_ci.
 • Ubah nama direktory framework-4.x.xx menjadi ci4.
-• Buka browser dengan alamat http://localhost/lab11_php_ci/ci4/public/
+• Buka browser dengan alamat http://localhost/Lab11Web/lab11_php_ci/ci4/public/
 
 ![foto](foto/3.PNG)
 

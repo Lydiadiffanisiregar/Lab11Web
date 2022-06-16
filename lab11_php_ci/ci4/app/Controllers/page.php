@@ -14,4 +14,8 @@ class Page extends BaseController
     {
     echo "Ini halaman FAQ";
     }
+    public function tos()
+    {
+    echo "ini halaman Term of Services";
+    }
 }
