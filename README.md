@@ -14,7 +14,8 @@ Sebelum memulai menggunakan Framework Codeigniter, perlu dilakukan konfigurasi p
 • libcurl (opsional), jika ingin pakai Curl. Untuk mengaktifkan ekstentsi tersebut,
 
 Untuk mengaktifkan ekstentsi tersebut, melalu XAMPP Control Panel, pada bagian Apache klik Config -> PHP.ini
-![foto](foto/1.PNG)
+
+![foto](foto/1.png)
 
 Setelah klik PHP(php.ini), pada bagian extention, hilangkan tanda ; (titik koma) pada ekstensi yang akan diaktifkan. Kemudian simpan kembali filenya dan restart Apache web server.
 ![foto](foto/1.PNG)
