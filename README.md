@@ -76,40 +76,40 @@ dan file yang ada. Buka pada <strong> Windows Explorer </strong> atau dari <stro
 <strong> Open Folder. </strong>
 
  <p> Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya. </p>
- <p> • .github folder ini kita butuhkan untuk konfigurasi repo github, seperti konfigurasi
+ <p> • <strong> .github </strong> folder ini kita butuhkan untuk konfigurasi repo github, seperti konfigurasi
 untuk build dengan github action; </p>
- <p> • app folder ini akan berisi kode dari aplikasi yang kita kembangkan; </p>
- <p> • public folder ini berisi file yang bisa diakses oleh publik, seperti file index.php,
+ <p> • <strong> app </strong> folder ini akan berisi kode dari aplikasi yang kita kembangkan; </p>
+ <p> • <strong> public </strong> folder ini berisi file yang bisa diakses oleh publik, seperti file index.php,
 robots.txt, favicon.ico, ads.txt, dll; </p>
- <p> • tests folder ini berisi kode untuk melakukan testing dengna PHPunit; </p>
- <p> • vendor folder ini berisi library yang dibutuhkan oleh aplikasi, isinya juga termasuk
+ <p> • <strong> tests </strong> folder ini berisi kode untuk melakukan testing dengna PHPunit; </p>
+ <p> • <strong> vendor </strong> folder ini berisi library yang dibutuhkan oleh aplikasi, isinya juga termasuk
 kode core dari system CI. </p>
- <p> • writable folder ini berisi file yang ditulis oleh aplikasi. Nantinya, kita bisa pakai
+ <p> • <strong> writable </strong> folder ini berisi file yang ditulis oleh aplikasi. Nantinya, kita bisa pakai
 untuk menyimpan file yang di-upload, logs, session, dll. </p>
  <p> Sedangkan file-file yang berada pada root direktori CI sebagai berikut. </p>
- <p> • .env adalah file yang berisi variabel environment yang dibutuhkan oleh aplikasi. </p>
- <p>• .gitignore adalah file yang berisi daftar nama file dan folder yang akan diabaikan
+ <p> • <strong> .env </strong> adalah file yang berisi variabel environment yang dibutuhkan oleh aplikasi. </p>
+ <p>• <strong> .gitignore </strong> adalah file yang berisi daftar nama file dan folder yang akan diabaikan
 oleh Git. </p>
- <p> • build adalah script untuk mengubah versi codeigniter yang digunakan. Ada versi
+ <p> • <strong> build </strong> adalah script untuk mengubah versi codeigniter yang digunakan. Ada versi
 release (stabil) dan development (labil). </p>
- <p> • composer.json adalah file JSON yang berisi informasi tentang proyek dan daftar
+ <p> • <strong> composer.json </strong> adalah file JSON yang berisi informasi tentang proyek dan daftar
 library yang dibutuhkannya. File ini digunakan oleh Composer sebagai acuan. </p>
- <p> • composer.lock adalah file yang berisi informasi versi dari libraray yang digunakan
+ <p> • <strong>composer.lock </strong> adalah file yang berisi informasi versi dari libraray yang digunakan
 aplikasi. </p>
- <p> • license.txt adalah file yang berisi penjelasan tentang lisensi Codeigniter; </p>
- <p> • phpunit.xml.dist adalah file XML yang berisi konfigurasi untuk PHPunit. </p>
- <p> • README.md adalah file keterangan tentang codebase CI. Ini biasanya akan
+ <p> • <strong> license.txt </strong> adalah file yang berisi penjelasan tentang lisensi Codeigniter; </p>
+ <p> • <strong> phpunit.xml.dist </strong> adalah file XML yang berisi konfigurasi untuk PHPunit. </p>
+ <p> • <strong> README.md </strong> adalah file keterangan tentang codebase CI. Ini biasanya akan
 dibutuhkan pada repo github atau gitlab. </p>
- <p> • spark adalah program atau script yang berfungsi untuk menjalankan server,
+ <p> • <strong> spark </strong> adalah program atau script yang berfungsi untuk menjalankan server,
 generate kode, dll. </p>
 
 ![foto](foto/10.PNG)
 
-Fokus kita pada folder app, dimana folder tersebut adalah area kerja kita untuk
-membuat aplikasi. Dan folder public untuk menyimpan aset web seperti css, gambar,
+Fokus kita pada folder <strong> app </strong>, dimana folder tersebut adalah area kerja kita untuk
+membuat aplikasi. Dan folder <strong> public </strong> untuk menyimpan aset web seperti css, gambar,
 javascript, dll.
 
-Memahami Konsep MVC
+<strong> Memahami Konsep MVC </strong>
 Codeigniter menggunakan konsep MVC. MVC meripakan singkatan dari
 Model-View-Controller. MVC merupakan konsep arsitektur yang umum digunakan
 dalam pengembangan aplikasi. Konsep MVC adalah memisahkan kode program
@@ -120,18 +120,18 @@ diletakkan pada direktori View.
 Codeigniter menggunakan konsep pemrograman berorientasi objek dalam
 mengimplementasikan konsep MVC.
 
-Model merupakan kode program yang berisi pemodelan data. Data dapat berupa
+<strong> Model </strong> merupakan kode program yang berisi pemodelan data. Data dapat berupa
 database ataupun sumber lainnya.
 
-View merupakan kode program yang berisi bagian yang menangani terkait tampilan
+<strong> View </strong> merupakan kode program yang berisi bagian yang menangani terkait tampilan
 user interface sebuah aplikasi. didalam aplikasi web biasanya pasti akan berhubungan
 dengan html dan css.
 
-Controller merupakaan kode program yang berkaitan dengan logic proses yang
+<strong> Controller </strong> merupakaan kode program yang berkaitan dengan logic proses yang
 menghubungkan antara view dan model. Controller berfungsi untuk menerima request
 dan data dari user kemudian diproses dengan menghubungkan bagian model dan view.
 
-Routing dan Controller
+<strong> Routing dan Controller </strong>
 Routing merupakan proses yang mengatur arah atau rute dari request untuk menentukan
 fungsi/bagian mana yang akan memproses request tersebut. Pada framework CI4,
 routing bertujuan untuk menentukan Controller mana yang harus merespon sebuah
@@ -141,7 +141,7 @@ request.
 Pada Codeigniter, request yang diterima oleh file index.php akan diarahkan ke Router
 untuk meudian oleh router tesebut diarahkan ke Controller.
 
-Router terletak pada file app/config/Routes.php
+Router terletak pada file <strong> app/config/Routes.php </strong>
 ![foto](foto/11.PNG)
 
 Pada file tersebut kita dapat mendefinisikan route untuk aplikasi yang kita buat.
