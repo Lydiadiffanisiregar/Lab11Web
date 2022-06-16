@@ -308,13 +308,13 @@ File app/view/template/footer.php
 <p>Vestibulum lorem elit, iaculis in nisl volutpat, malesuada
 tincidunt arcu. Proin in leo fringilla, vestibulum mi porta, faucibus felis.
 Integer pharetra est nunc, nec pretium nunc pretium ac.</p>
-</div>
-</aside>
-</section>
-<footer>
-<p>&copy; 2021 - Universitas Pelita Bangsa</p>
-</footer>
-</div>
+            </div>
+        </aside>
+    </section>
+    <footer>
+        <p>&copy; 2021 - Universitas Pelita Bangsa</p>
+    </footer>
+    </div>
 </body>
 </html>
 ```
