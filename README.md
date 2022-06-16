@@ -23,7 +23,7 @@ Setelah klik PHP(php.ini), pada bagian extention, hilangkan tanda ; (titik koma)
 
 ![foto](foto/2.PNG)
 
-# Instalasi Codeigniter 4
+<strong> Instalasi Codeigniter 4 </strong>
 Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu cara manual dan menggunakan composer. Pada praktikum ini kita menggunakan cara manual.
 • Unduh Codeigniter dari website https://codeigniter.com/download
 • Extrak file zip Codeigniter ke direktori htdocs/lab11_php_ci.
@@ -32,7 +32,7 @@ Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu c
 
 ![foto](foto/3.PNG)
 
-Menjalankan CLI (Command Line Interface)
+<strong> Menjalankan CLI (Command Line Interface) </strong>
 Codeigniter 4 menyediakan CLI untuk mempermudah proses development. Untuk mengakses CLI buka terminal/command prompt.
 
 ![foto](foto/4.PNG)
@@ -46,7 +46,7 @@ php spark
 
 ![foto](foto/5.PNG)
 
-# Mengaktifkan Mode Debugging
+<strong> Mengaktifkan Mode Debugging </strong>
 Codeigniter 4 menyediakan fitur debugging untuk memudahkan developer untuk
 mengetahui pesan error apabila terjadi kesalahan dalam membuat kode program.
 Secara default fitur ini belum aktif. Ketika terjadi error pada aplikasi akan ditampilkan
@@ -153,8 +153,8 @@ $routes->get('/', 'Home::index');
 
 Kode tersebut akan mengarahkan rute untuk halaman home.
 
-Membuat Route Baru.
-Tambahkan kode berikut di dalam Routes.php
+<strong> Membuat Route Baru. </strong>
+Tambahkan kode berikut di dalam <strong> Routes.php </strong>
 ```php
 $routes->get('/about', 'Page::about');
 $routes->get('/contact', 'Page::contact');
@@ -178,9 +178,10 @@ Ketika diakses akan mucul tampilan error 404 file not found, itu artinya file/pa
 tersebut tidak ada. Untuk dapat mengakses halaman tersebut, harus dibuat terlebih
 dahulu Contoller yang sesuai dengan routing yang dibuat yaitu Contoller Page.
 
-# Membuat Controller
+<strong> Membuat Controller </strong>
 Selanjutnya adalah membuat Controller Page. Buat file baru dengan nama page.php
 pada direktori Controller kemudian isi kodenya seperti berikut.
+
 ```php
 <?php
 namespace App\Controllers;
@@ -206,7 +207,7 @@ sudah dapat diakses.
 
 ![foto](foto/14.PNG)
 
-# Auto Routing
+<strong> Auto Routing </strong>
 Secara default fitur autoroute pada Codeiginiter sudah aktif. Untuk mengubah status
 autoroute dapat mengubah nilai variabelnya. Untuk menonaktifkan ubah nilai true
 menjadi false.
@@ -229,7 +230,7 @@ alamat: http://localhost:8080/page/tos
 
 ![foto](foto/15.PNG)
 
-Membuat View
+<strong> Membuat View </strong>
 Selanjutnya adalam membuat view untuk tampilan web agar lebih menarik. Buat file
 baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi
 kodenya seperti berikut.
@@ -265,7 +266,7 @@ halaman ini.'
 Kemudian lakukan refresh pada halaman tersebut.
 ![foto](foto/16.PNG)
 
-# Membuat Layout Web dengan CSS
+<strong> Membuat Layout Web dengan CSS </strong>
 Pada dasarnya layout web dengan css dapat diimplamentasikan dengan mudah pada
 codeigniter. Yang perlu diketahui adalah, pada Codeigniter 4 file yang menyimpan asset
 css dan javascript terletak pada direktori public.
@@ -344,7 +345,7 @@ Selanjutnya refresh tampilan pada alamat http://localhost:8080/about
 
 ![foto](foto/18.PNG)
 
-Pertanyaan dan Tugas
+<strong> Pertanyaan dan Tugas </strong>
 Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga
 semua link pada navigasi header dapat menampilkan tampilan dengan layout yang
 sama.
@@ -354,23 +355,23 @@ sama.
 
 Membuat Database: Studi Kasus Data Artikel
 
-# Membuat Database
+<strong> Membuat Database </strong>
 
 ```php
 CREATE DATABASE lab_ci4;
 ```
 
-# Membuat Tabel
+<strong> Membuat Tabel </strong>
 
 ```php
 CREATE TABLE artikel ( id INT(11) auto_increment, judul VARCHAR(200) NOT NULL, isi TEXT, gambar VARCHAR(200), status TINYINT(1) DEFAULT 0, slug VARCHAR(200), PRIMARY KEY(id) );
 ```
 
-# Konfigurasi koneksi database
+<strong> Konfigurasi koneksi database </strong>
 Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan du acara, yaitu pada file app/config/database.php atau menggunakan file .env. Pada praktikum ini kita gunakan konfigurasi pada file .env.
 ![foto](foto/19.PNG)
 
-# Membuat Model
+<strong> Membuat Model </strong>
 Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada direktori app/Models dengan nama ArtikelModel.php
 
 ```php
@@ -386,7 +387,7 @@ protected $allowedFields = ['judul', 'isi', 'status', 'slug', 'gambar'];
 }
 ```
 
-# Membuat Controller
+<strong> Membuat Controller </strong>
 Buat Controller baru dengan nama Artikel.php pada direktori app/Controllers.
 
 ```php
@@ -405,7 +406,7 @@ class Artikel extends BaseController
 }
 ```
 
-# Membuat View
+<strong> Membuat View </strong>
 Buat direktori baru dengan nama artikel pada direktori app/views, kemudian buat file
 baru dengan nama index.php.
 
@@ -451,7 +452,7 @@ dari 2000 tahun.', 'artikel-kedua');
 Refresh kembali browser, sehingga akan ditampilkan hasilnya.
 ![foto](foto/20.PNG)
 
-# Membuat Tampilan Detail Artikel
+<strong> Membuat Tampilan Detail Artikel </strong>
 Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda.
 Tambahkan fungsi baru pada Controller Artikel dengan nama view().
 
@@ -472,7 +473,7 @@ return view('artikel/detail', compact('artikel', 'title'));
 }
 ```
 
-# Membuat View Detail
+<strong> Membuat View Detail </strong>
 Buat view baru untuk halaman detail dengan nama app/views/artikel/detail.php.
 
 ```php
@@ -486,7 +487,7 @@ $artikel['judul']; ?>">
 <?= $this->include('template/footer'); ?>
 ```
 
-# Membuat Routing untuk artikel detail
+<strong> Membuat Routing untuk artikel detail </strong>
 Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artikel
 detail.
 
@@ -496,7 +497,7 @@ $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 
 ![foto](foto/21.PNG)
 
-# Membuat Menu Admin
+<strong> Membuat Menu Admin </strong>
 Menu admin adalah untuk proses CRUD data artikel. Buat method baru pada
 Controller Artikel dengan nama admin_index().
 
@@ -573,7 +574,7 @@ Akses menu admin dengan url http://localhost:8080/admin/artikel
 
 ![foto](foto/22.PNG)
 
-Menambah Data Artikel
+<strong> Menambah Data Artikel </strong>
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama add().
 
 ```php
@@ -617,7 +618,7 @@ Kemudian buat view untuk form tambah dengan nama form_add.php
 
 ![foto](foto/22.PNG)
 
-# Mengubah Data
+<strong> Mengubah Data </strong>
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama edit().
 
 ```php
@@ -663,7 +664,7 @@ $data['isi'];?></textarea>
 
 ![foto](foto/23.PNG)
 
-# Menghapus Data
+<strong> Menghapus Data </strong>
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama delete().
 
 ```php
@@ -675,6 +676,6 @@ return redirect('admin/artikel');
 }
 ```
 
-## Pertanyaan dan Tugas
+<strong> Pertanyaan dan Tugas </strong>
 Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan
 improvisasi.
