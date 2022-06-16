@@ -6,7 +6,9 @@ Repository ini dibuat untuk memenuhi tugas Pemrograman Web
 | Kelas   | TI.20.A.1        |
 
 # Langkah-langkah Praktikum
-Sebelum memulai menggunakan Framework Codeigniter, perlu dilakukan konfigurasi pada webserver. Beberapa ekstensi PHP perlu diaktifkan untuk kebutuhan pengembangan Codeigniter 4. Berikut beberapa ekstensi yang perlu diaktifkan:
+Sebelum memulai menggunakan Framework Codeigniter, perlu dilakukan konfigurasi pada webserver. Beberapa ekstensi PHP perlu diaktifkan untuk kebutuhan pengembangan Codeigniter 4.
+
+Berikut beberapa ekstensi yang perlu diaktifkan:
 • php-json ekstension untuk bekerja dengan JSON;
 • php-mysqlnd native driver untuk MySQL;
 • php-xml ekstension untuk bekerja dengan XML;
@@ -18,19 +20,22 @@ Untuk mengaktifkan ekstentsi tersebut, melalu XAMPP Control Panel, pada bagian A
 ![foto](foto/1.png)
 
 Setelah klik PHP(php.ini), pada bagian extention, hilangkan tanda ; (titik koma) pada ekstensi yang akan diaktifkan. Kemudian simpan kembali filenya dan restart Apache web server.
+
 ![foto](foto/2.PNG)
 
-Instalasi Codeigniter 4
+# Instalasi Codeigniter 4
 Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu cara manual dan menggunakan composer. Pada praktikum ini kita menggunakan cara manual.
 • Unduh Codeigniter dari website https://codeigniter.com/download
 • Extrak file zip Codeigniter ke direktori htdocs/lab11_php_ci.
 • Ubah nama direktory framework-4.x.xx menjadi ci4.
 • Buka browser dengan alamat http://localhost/lab11_php_ci/ci4/public/
-![foto](foto/1.PNG)
+
+![foto](foto/3.PNG)
 
 Menjalankan CLI (Command Line Interface)
 Codeigniter 4 menyediakan CLI untuk mempermudah proses development. Untuk mengakses CLI buka terminal/command prompt.
-![foto](foto/1.PNG)
+
+![foto](foto/4.PNG)
 
 Arahkan lokasi direktori sesuai dengan direktori kerja project dibuat (xampp/htdocs/lab11_ci/ci4/)
 
@@ -39,29 +44,33 @@ Setelah itu kita memanggil CLI Codeigniter dengan menjalankan perintah:
 php spark
 ```
 
-![foto](foto/1.PNG)
+![foto](foto/5.PNG)
 
 # Mengaktifkan Mode Debugging
 Codeigniter 4 menyediakan fitur debugging untuk memudahkan developer untuk
 mengetahui pesan error apabila terjadi kesalahan dalam membuat kode program.
 Secara default fitur ini belum aktif. Ketika terjadi error pada aplikasi akan ditampilkan
 pesan kesalahan seperti berikut.
-![foto](foto/1.PNG)
+
+![foto](foto/6.PNG)
 
 Semua jenis error akan ditampilkan sama. Untuk memudahkan mengetahui jenis
 errornya, maka perlu diaktifkan mode debugging dengan mengubah nilai konfigurasi
 pada environment variable CI_ENVIRINMENT menjadi development.
-![foto](foto/1.PNG)
+
+![foto](foto/7.PNG)
 
 Ubah nama file env menjadi .env kemudian buka file tersebut dan ubah nilai variable
 CI_ENVIRINMENT menjadi development.
-![foto](foto/1.PNG)
+
+![foto](foto/8.PNG)
 
 Contoh error yang terjadi. Untuk mencoba error tersebut, ubah kode pada file
 app/Controller/Home.php hilangkan titik koma pada akhir kode.
-![foto](foto/1.PNG)
 
-Struktur Direktori
+![foto](foto/9.PNG)
+
+# Struktur Direktori
 Untuk lebih memahami Framework Codeigniter 4 perlu mengetahui struktur direktori
 dan file yang ada. Buka pada Windows Explorer atau dari Visual Studio Code ->
 Open Folder.
@@ -92,7 +101,8 @@ aplikasi.
 dibutuhkan pada repo github atau gitlab.
 • spark adalah program atau script yang berfungsi untuk menjalankan server,
 generate kode, dll.
-![foto](foto/1.PNG)
+
+![foto](foto/10.PNG)
 
 Fokus kita pada folder app, dimana folder tersebut adalah area kerja kita untuk
 membuat aplikasi. Dan folder public untuk menyimpan aset web seperti css, gambar,
@@ -131,7 +141,7 @@ Pada Codeigniter, request yang diterima oleh file index.php akan diarahkan ke Ro
 untuk meudian oleh router tesebut diarahkan ke Controller.
 
 Router terletak pada file app/config/Routes.php
-![foto](foto/1.PNG)
+![foto](foto/11.PNG)
 
 Pada file tersebut kita dapat mendefinisikan route untuk aplikasi yang kita buat.
 
@@ -156,18 +166,18 @@ perintah berikut.
 php spark routes
 ```
 
-![foto](foto/1.PNG)
+![foto](foto/12.PNG)
 
 Selanjutnya coba akses route yang telah dibuat dengan mengakses alamat url
 http://localhost:8080/about
 
-![foto](foto/1.PNG)
+![foto](foto/13.PNG)
 
 Ketika diakses akan mucul tampilan error 404 file not found, itu artinya file/page
 tersebut tidak ada. Untuk dapat mengakses halaman tersebut, harus dibuat terlebih
 dahulu Contoller yang sesuai dengan routing yang dibuat yaitu Contoller Page.
 
-Membuat Controller
+# Membuat Controller
 Selanjutnya adalah membuat Controller Page. Buat file baru dengan nama page.php
 pada direktori Controller kemudian isi kodenya seperti berikut.
 ```php
@@ -193,9 +203,9 @@ echo "Ini halaman FAQ";
 Selanjutnya refresh Kembali browser, maka akan ditampilkan hasilnya yaotu halaman
 sudah dapat diakses.
 
-![foto](foto/1.PNG)
+![foto](foto/14.PNG)
 
-Auto Routing
+# Auto Routing
 Secara default fitur autoroute pada Codeiginiter sudah aktif. Untuk mengubah status
 autoroute dapat mengubah nilai variabelnya. Untuk menonaktifkan ubah nilai true
 menjadi false.
@@ -216,7 +226,7 @@ echo "ini halaman Term of Services";
 Method ini belum ada pada routing, sehingga cara mengaksesnya dengan menggunakan
 alamat: http://localhost:8080/page/tos
 
-![foto](foto/1.PNG)
+![foto](foto/15.PNG)
 
 Membuat View
 Selanjutnya adalam membuat view untuk tampilan web agar lebih menarik. Buat file
@@ -252,9 +262,9 @@ halaman ini.'
 ```
 
 Kemudian lakukan refresh pada halaman tersebut.
-![foto](foto/1.PNG)
+![foto](foto/16.PNG)
 
-Membuat Layout Web dengan CSS
+# Membuat Layout Web dengan CSS
 Pada dasarnya layout web dengan css dapat diimplamentasikan dengan mudah pada
 codeigniter. Yang perlu diketahui adalah, pada Codeigniter 4 file yang menyimpan asset
 css dan javascript terletak pada direktori public.
@@ -262,7 +272,7 @@ css dan javascript terletak pada direktori public.
 Buat file css pada direktori public dengan nama style.css (copy file dari praktikum
 lab4_layout. Kita akan gunakan layout yang pernah dibuat pada praktikum 4.
 
-![foto](foto/1.PNG)
+![foto](foto/17.PNG)
 
 Kemudian buat folder template pada direktori view kemudian buat file header.php dan
 footer.php
@@ -331,7 +341,7 @@ Kemudian ubah file app/view/about.php seperti berikut.
 
 Selanjutnya refresh tampilan pada alamat http://localhost:8080/about
 
-![foto](foto/1.PNG)
+![foto](foto/18.PNG)
 
 Pertanyaan dan Tugas
 Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga
