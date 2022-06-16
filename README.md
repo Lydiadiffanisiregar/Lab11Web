@@ -75,32 +75,32 @@ Untuk lebih memahami Framework Codeigniter 4 perlu mengetahui struktur direktori
 dan file yang ada. Buka pada Windows Explorer atau dari Visual Studio Code ->
 Open Folder.
 
-<p> Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya.
-• .github folder ini kita butuhkan untuk konfigurasi repo github, seperti konfigurasi
-untuk build dengan github action;
-• app folder ini akan berisi kode dari aplikasi yang kita kembangkan;
-• public folder ini berisi file yang bisa diakses oleh publik, seperti file index.php,
-robots.txt, favicon.ico, ads.txt, dll;
-• tests folder ini berisi kode untuk melakukan testing dengna PHPunit;
-• vendor folder ini berisi library yang dibutuhkan oleh aplikasi, isinya juga termasuk
-kode core dari system CI.
-• writable folder ini berisi file yang ditulis oleh aplikasi. Nantinya, kita bisa pakai
-untuk menyimpan file yang di-upload, logs, session, dll.
-Sedangkan file-file yang berada pada root direktori CI sebagai berikut.
-• .env adalah file yang berisi variabel environment yang dibutuhkan oleh aplikasi.
-• .gitignore adalah file yang berisi daftar nama file dan folder yang akan diabaikan
-oleh Git.
+ <p> Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya. </p>
+ <p> • .github folder ini kita butuhkan untuk konfigurasi repo github, seperti konfigurasi
+untuk build dengan github action; </p>
+ <p> • app folder ini akan berisi kode dari aplikasi yang kita kembangkan; </p>
+ <p> • public folder ini berisi file yang bisa diakses oleh publik, seperti file index.php,
+robots.txt, favicon.ico, ads.txt, dll; </p>
+ <p> • tests folder ini berisi kode untuk melakukan testing dengna PHPunit; </p>
+ <p> • vendor folder ini berisi library yang dibutuhkan oleh aplikasi, isinya juga termasuk
+kode core dari system CI. </p>
+ <p> • writable folder ini berisi file yang ditulis oleh aplikasi. Nantinya, kita bisa pakai
+untuk menyimpan file yang di-upload, logs, session, dll. </p>
+ <p> Sedangkan file-file yang berada pada root direktori CI sebagai berikut. </p>
+ <p> • .env adalah file yang berisi variabel environment yang dibutuhkan oleh aplikasi. </p>
+ <p>• .gitignore adalah file yang berisi daftar nama file dan folder yang akan diabaikan
+oleh Git. </p>
 • build adalah script untuk mengubah versi codeigniter yang digunakan. Ada versi
-release (stabil) dan development (labil).
+release (stabil) dan development (labil). </p>
 • composer.json adalah file JSON yang berisi informasi tentang proyek dan daftar
-library yang dibutuhkannya. File ini digunakan oleh Composer sebagai acuan.
+library yang dibutuhkannya. File ini digunakan oleh Composer sebagai acuan. </p>
 • composer.lock adalah file yang berisi informasi versi dari libraray yang digunakan
-aplikasi.
-• license.txt adalah file yang berisi penjelasan tentang lisensi Codeigniter;
-• phpunit.xml.dist adalah file XML yang berisi konfigurasi untuk PHPunit.
-• README.md adalah file keterangan tentang codebase CI. Ini biasanya akan
-dibutuhkan pada repo github atau gitlab.
-• spark adalah program atau script yang berfungsi untuk menjalankan server,
+aplikasi. </p>
+• license.txt adalah file yang berisi penjelasan tentang lisensi Codeigniter; </p>
+ <p> • phpunit.xml.dist adalah file XML yang berisi konfigurasi untuk PHPunit. </p>
+ <p> • README.md adalah file keterangan tentang codebase CI. Ini biasanya akan
+dibutuhkan pada repo github atau gitlab. </p>
+ <p> • spark adalah program atau script yang berfungsi untuk menjalankan server,
 generate kode, dll. </p>
 
 ![foto](foto/10.PNG)
