@@ -74,7 +74,8 @@ app/Controller/Home.php hilangkan titik koma pada akhir kode.
 Untuk lebih memahami Framework Codeigniter 4 perlu mengetahui struktur direktori
 dan file yang ada. Buka pada Windows Explorer atau dari Visual Studio Code ->
 Open Folder.
-Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya.
+
+<p> Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya.
 • .github folder ini kita butuhkan untuk konfigurasi repo github, seperti konfigurasi
 untuk build dengan github action;
 • app folder ini akan berisi kode dari aplikasi yang kita kembangkan;
@@ -100,7 +101,7 @@ aplikasi.
 • README.md adalah file keterangan tentang codebase CI. Ini biasanya akan
 dibutuhkan pada repo github atau gitlab.
 • spark adalah program atau script yang berfungsi untuk menjalankan server,
-generate kode, dll.
+generate kode, dll. </p>
 
 ![foto](foto/10.PNG)
 
