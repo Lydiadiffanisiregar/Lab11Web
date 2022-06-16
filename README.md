@@ -90,13 +90,13 @@ untuk menyimpan file yang di-upload, logs, session, dll. </p>
  <p> • .env adalah file yang berisi variabel environment yang dibutuhkan oleh aplikasi. </p>
  <p>• .gitignore adalah file yang berisi daftar nama file dan folder yang akan diabaikan
 oleh Git. </p>
-• build adalah script untuk mengubah versi codeigniter yang digunakan. Ada versi
+ <p> • build adalah script untuk mengubah versi codeigniter yang digunakan. Ada versi
 release (stabil) dan development (labil). </p>
-• composer.json adalah file JSON yang berisi informasi tentang proyek dan daftar
+ <p> • composer.json adalah file JSON yang berisi informasi tentang proyek dan daftar
 library yang dibutuhkannya. File ini digunakan oleh Composer sebagai acuan. </p>
-• composer.lock adalah file yang berisi informasi versi dari libraray yang digunakan
+ <p> • composer.lock adalah file yang berisi informasi versi dari libraray yang digunakan
 aplikasi. </p>
-• license.txt adalah file yang berisi penjelasan tentang lisensi Codeigniter; </p>
+ <p> • license.txt adalah file yang berisi penjelasan tentang lisensi Codeigniter; </p>
  <p> • phpunit.xml.dist adalah file XML yang berisi konfigurasi untuk PHPunit. </p>
  <p> • README.md adalah file keterangan tentang codebase CI. Ini biasanya akan
 dibutuhkan pada repo github atau gitlab. </p>
