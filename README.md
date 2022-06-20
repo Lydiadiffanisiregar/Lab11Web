@@ -198,12 +198,12 @@ echo "Ini halaman FAQ";
 }
 ```
 
-Selanjutnya refresh Kembali browser, maka akan ditampilkan hasilnya yaotu halaman
-sudah dapat diakses.
+<p> Selanjutnya refresh Kembali browser, maka akan ditampilkan hasilnya yaotu halaman
+sudah dapat diakses. </p>
 
 ![foto](foto/14.PNG)
 
-<strong> Auto Routing </strong>
+# Auto Routing
 Secara default fitur autoroute pada Codeiginiter sudah aktif. Untuk mengubah status
 autoroute dapat mengubah nilai variabelnya. Untuk menonaktifkan ubah nilai true
 menjadi false.
