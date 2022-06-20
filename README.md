@@ -44,7 +44,7 @@ php spark
 
 ![foto](foto/5.PNG)
 
-<p> <strong> Mengaktifkan Mode Debugging </strong> </p>
+# <p> Mengaktifkan Mode Debugging </p>
 <p> Codeigniter 4 menyediakan fitur debugging untuk memudahkan developer untuk
 mengetahui pesan error apabila terjadi kesalahan dalam membuat kode program.
 Secara default fitur ini belum aktif. Ketika terjadi error pada aplikasi akan ditampilkan
