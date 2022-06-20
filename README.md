@@ -135,7 +135,7 @@ request.
 Pada Codeigniter, request yang diterima oleh file index.php akan diarahkan ke Router
 untuk meudian oleh router tesebut diarahkan ke Controller.
 
-Router terletak pada file <strong> app/config/Routes.php </strong>
+<p> Router terletak pada file <strong> app/config/Routes.php </strong> </p>
 ![foto](foto/11.PNG)
 
 Pada file tersebut kita dapat mendefinisikan route untuk aplikasi yang kita buat.
