@@ -174,7 +174,7 @@ Ketika diakses akan mucul tampilan error 404 file not found, itu artinya file/pa
 tersebut tidak ada. Untuk dapat mengakses halaman tersebut, harus dibuat terlebih
 dahulu Contoller yang sesuai dengan routing yang dibuat yaitu Contoller Page.
 
-<strong> Membuat Controller </strong>
+# Membuat Controller
 Selanjutnya adalah membuat Controller Page. Buat file baru dengan nama page.php
 pada direktori Controller kemudian isi kodenya seperti berikut.
 
