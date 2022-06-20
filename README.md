@@ -1,4 +1,4 @@
-## Praktikum 11: PHP Framework (Codeigniter)
+# Praktikum 11: PHP Framework (Codeigniter)
 Repository ini dibuat untuk memenuhi tugas Pemrograman Web
 | Nama      | Lydia Diffani Siregar |
 | ----------- | ----------- |
@@ -6,14 +6,12 @@ Repository ini dibuat untuk memenuhi tugas Pemrograman Web
 | Kelas   | TI.20.A.1        |
 
 # Langkah-langkah Praktikum
-Sebelum memulai menggunakan Framework Codeigniter, perlu dilakukan konfigurasi pada webserver. Beberapa ekstensi PHP perlu diaktifkan untuk kebutuhan pengembangan Codeigniter 4.
-
-Berikut beberapa ekstensi yang perlu diaktifkan:
-• php-json ekstension untuk bekerja dengan JSON;
-• php-mysqlnd native driver untuk MySQL;
-• php-xml ekstension untuk bekerja dengan XML;
-• php-intl ekstensi untuk membuat aplikasi multibahasa;
-• libcurl (opsional), jika ingin pakai Curl. Untuk mengaktifkan ekstentsi tersebut,
+Sebelum memulai menggunakan Framework Codeigniter, perlu dilakukan konfigurasi pada webserver. Beberapa ekstensi PHP perlu diaktifkan untuk kebutuhan pengembangan Codeigniter 4. Berikut beberapa ekstensi yang perlu diaktifkan:
+<p> • php-json ekstension untuk bekerja dengan JSON; </p>
+<p> • php-mysqlnd native driver untuk MySQL; </p>
+<p> • php-xml ekstension untuk bekerja dengan XML; </p>
+<p> • php-intl ekstensi untuk membuat aplikasi multibahasa; </p>
+<p> • libcurl (opsional), jika ingin pakai Curl. Untuk mengaktifkan ekstentsi tersebut, </p>
 
 Untuk mengaktifkan ekstentsi tersebut, melalu XAMPP Control Panel, pada bagian Apache klik Config -> PHP.ini
 
