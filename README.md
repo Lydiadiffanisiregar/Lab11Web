@@ -13,7 +13,7 @@ Sebelum memulai menggunakan Framework Codeigniter, perlu dilakukan konfigurasi p
 <p> <strong> • php-intl </strong> ekstensi untuk membuat aplikasi multibahasa; </p>
 <p> <strong> • libcurl </strong> (opsional), jika ingin pakai Curl. Untuk mengaktifkan ekstentsi tersebut, </p>
 
-Untuk mengaktifkan ekstentsi tersebut, melalu XAMPP Control Panel, pada bagian Apache klik Config -> PHP.ini
+Untuk mengaktifkan ekstentsi tersebut, melalu <strong> XAMPP Control Panel </strong>, pada bagian Apache klik <strong> Config -> PHP.ini </strong>
 
 ![foto](foto/1.png)
 
