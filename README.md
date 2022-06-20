@@ -30,8 +30,8 @@ Setelah klik PHP(php.ini), pada bagian extention, hilangkan tanda ; (titik koma)
 
 ![foto](foto/3.PNG)
 
-<strong> Menjalankan CLI (Command Line Interface) </strong>
-Codeigniter 4 menyediakan CLI untuk mempermudah proses development. Untuk mengakses CLI buka terminal/command prompt.
+<p> <strong> Menjalankan CLI (Command Line Interface) </strong> </p>
+<p> Codeigniter 4 menyediakan CLI untuk mempermudah proses development. Untuk mengakses CLI buka terminal/command prompt. </p>
 
 ![foto](foto/4.PNG)
 
