@@ -150,6 +150,7 @@ Kode tersebut akan mengarahkan rute untuk halaman home.
 
 # Membuat Route Baru.
 <p> Tambahkan kode berikut di dalam <strong> Routes.php </strong> </p>
+
 ```php
 $routes->get('/about', 'Page::about');
 $routes->get('/contact', 'Page::contact');
