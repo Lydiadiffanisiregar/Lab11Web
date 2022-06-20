@@ -262,7 +262,7 @@ halaman ini.'
 Kemudian lakukan refresh pada halaman tersebut.
 ![foto](foto/16.PNG)
 
-<strong> Membuat Layout Web dengan CSS </strong>
+# Membuat Layout Web dengan CSS
 Pada dasarnya layout web dengan css dapat diimplamentasikan dengan mudah pada
 codeigniter. Yang perlu diketahui adalah, pada Codeigniter 4 file yang menyimpan asset
 css dan javascript terletak pada direktori public.
