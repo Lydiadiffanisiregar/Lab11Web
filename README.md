@@ -103,7 +103,7 @@ Fokus kita pada folder <strong> app </strong>, dimana folder tersebut adalah are
 membuat aplikasi. Dan folder <strong> public </strong> untuk menyimpan aset web seperti css, gambar,
 javascript, dll.
 
-<p> <strong> Memahami Konsep MVC </strong> </p>
+# <p> Memahami Konsep MVC </p>
 Codeigniter menggunakan konsep MVC. MVC meripakan singkatan dari
 Model-View-Controller. MVC merupakan konsep arsitektur yang umum digunakan
 dalam pengembangan aplikasi. Konsep MVC adalah memisahkan kode program
