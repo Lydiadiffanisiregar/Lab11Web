@@ -80,8 +80,7 @@ robots.txt, favicon.ico, ads.txt, dll; </p>
  <p> • <strong> vendor </strong> folder ini berisi library yang dibutuhkan oleh aplikasi, isinya juga termasuk
 kode core dari system CI. </p>
  <p> • <strong> writable </strong> folder ini berisi file yang ditulis oleh aplikasi. Nantinya, kita bisa pakai
-untuk menyimpan file yang di-upload, logs, session, dll. </p>
- <p> Sedangkan file-file yang berada pada root direktori CI sebagai berikut. </p>
+untuk menyimpan file yang di-upload, logs, session, dll. Sedangkan file-file yang berada pada root direktori CI sebagai berikut. </p>
  <p> • <strong> .env </strong> adalah file yang berisi variabel environment yang dibutuhkan oleh aplikasi. </p>
  <p>• <strong> .gitignore </strong> adalah file yang berisi daftar nama file dan folder yang akan diabaikan
 oleh Git. </p>
