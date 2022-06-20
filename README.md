@@ -341,7 +341,7 @@ Selanjutnya refresh tampilan pada alamat http://localhost:8080/about
 
 ![foto](foto/18.PNG)
 
-<strong> Pertanyaan dan Tugas </strong>
+# Pertanyaan dan Tugas
 Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga
 semua link pada navigasi header dapat menampilkan tampilan dengan layout yang
 sama.
