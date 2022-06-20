@@ -70,10 +70,7 @@ app/Controller/Home.php hilangkan titik koma pada akhir kode.
 
 # Struktur Direktori
 Untuk lebih memahami Framework Codeigniter 4 perlu mengetahui struktur direktori
-dan file yang ada. Buka pada <strong> Windows Explorer </strong> atau dari <strong> Visual Studio Code </strong> ->
-<strong> Open Folder. </strong>
-
- <p> Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya. </p>
+dan file yang ada. Buka pada <strong> Windows Explorer </strong> atau dari <strong> Visual Studio Code </strong> -> <strong> Open Folder. </strong> Terdapat beberapa direktori dan file yang perlu dipahami fungsi dan kegunaannya. </p>
  <p> • <strong> .github </strong> folder ini kita butuhkan untuk konfigurasi repo github, seperti konfigurasi
 untuk build dengan github action; </p>
  <p> • <strong> app </strong> folder ini akan berisi kode dari aplikasi yang kita kembangkan; </p>
