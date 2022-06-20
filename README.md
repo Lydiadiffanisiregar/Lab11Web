@@ -58,8 +58,8 @@ pada environment variable <strong> CI_ENVIRINMENT </strong> menjadi <strong> dev
 
 ![foto](foto/7.PNG)
 
-Ubah nama file env menjadi .env kemudian buka file tersebut dan ubah nilai variable
-CI_ENVIRINMENT menjadi development.
+<p> Ubah nama file env menjadi .env kemudian buka file tersebut dan ubah nilai variable
+<strong> CI_ENVIRINMENT </strong> menjadi <strong> development. </strong> </p>
 
 ![foto](foto/8.PNG)
 
