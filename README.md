@@ -175,7 +175,7 @@ tersebut tidak ada. Untuk dapat mengakses halaman tersebut, harus dibuat terlebi
 dahulu Contoller yang sesuai dengan routing yang dibuat yaitu Contoller Page.
 
 # Membuat Controller
-Selanjutnya adalah membuat Controller Page. Buat file baru dengan nama page.php
+Selanjutnya adalah membuat Controller Page. Buat file baru dengan nama <strong> page.php </strong>
 pada direktori Controller kemudian isi kodenya seperti berikut.
 
 ```php
