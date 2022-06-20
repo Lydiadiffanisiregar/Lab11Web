@@ -206,7 +206,7 @@ sudah dapat diakses. </p>
 # Auto Routing
 Secara default fitur autoroute pada Codeiginiter sudah aktif. Untuk mengubah status
 autoroute dapat mengubah nilai variabelnya. Untuk menonaktifkan ubah nilai true
-menjadi false.
+menjadi <strong> false. </strong> 
 
 ```php
 $routes->setAutoRoute(true);
