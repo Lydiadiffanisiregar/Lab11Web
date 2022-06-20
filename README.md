@@ -22,11 +22,11 @@ Setelah klik PHP(php.ini), pada bagian extention, hilangkan tanda ; (titik koma)
 ![foto](foto/2.PNG)
 
 <p> <strong> Instalasi Codeigniter 4 </strong> </p>
-Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu cara manual dan menggunakan composer. Pada praktikum ini kita menggunakan cara manual.
-• Unduh Codeigniter dari website https://codeigniter.com/download
-• Extrak file zip Codeigniter ke direktori htdocs/lab11_php_ci.
-• Ubah nama direktory framework-4.x.xx menjadi ci4.
-• Buka browser dengan alamat http://localhost/Lab11Web/lab11_php_ci/ci4/public/
+<p> Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu cara manual dan menggunakan composer. Pada praktikum ini kita menggunakan cara manual. </p>
+<p> • Unduh Codeigniter dari website https://codeigniter.com/download </p>
+<p> • Extrak file zip Codeigniter ke direktori htdocs/lab11_php_ci. </p>
+<p> • Ubah nama direktory framework-4.x.xx menjadi ci4. </p>
+<p> • Buka browser dengan alamat http://localhost/Lab11Web/lab11_php_ci/ci4/public/ </p>
 
 ![foto](foto/3.PNG)
 
