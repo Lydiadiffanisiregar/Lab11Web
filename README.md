@@ -52,9 +52,9 @@ pesan kesalahan seperti berikut. </p>
 
 ![foto](foto/6.PNG)
 
-Semua jenis error akan ditampilkan sama. Untuk memudahkan mengetahui jenis
+<p> Semua jenis error akan ditampilkan sama. Untuk memudahkan mengetahui jenis
 errornya, maka perlu diaktifkan mode debugging dengan mengubah nilai konfigurasi
-pada environment variable CI_ENVIRINMENT menjadi development.
+pada environment variable <strong> CI_ENVIRINMENT </strong> menjadi <strong> development.</strong> </p>
 
 ![foto](foto/7.PNG)
 
