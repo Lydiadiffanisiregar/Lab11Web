@@ -226,7 +226,7 @@ alamat: http://localhost:8080/page/tos
 
 ![foto](foto/15.PNG)
 
-<strong> Membuat View </strong>
+# Membuat View
 Selanjutnya adalam membuat view untuk tampilan web agar lebih menarik. Buat file
 baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi
 kodenya seperti berikut.
