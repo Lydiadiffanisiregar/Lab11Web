@@ -433,7 +433,7 @@ Selanjutnya buka browser kembali, dengan mengakses url http://localhost:8080/art
 Belum ada data yang ditampilkan. Kemudian coba tambahkan beberapa data pada
 database agar dapat ditampilkan datanya.
 
-<strong> Masukkan data ke tabel artikel </strong>
+# Masukkan data ke tabel artikel
 pada http://localhost/phpmyadmin
 
 ```php
