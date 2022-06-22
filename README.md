@@ -454,7 +454,7 @@ dari 2000 tahun.', 'artikel-kedua');
 Refresh kembali browser, sehingga akan ditampilkan hasilnya.
 ![foto](foto/26.PNG)
 
-<strong> Membuat Tampilan Detail Artikel </strong>
+# Membuat Tampilan Detail Artikel
 Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda.
 Tambahkan fungsi baru pada Controller Artikel dengan nama <strong> view(). </strong>
 
