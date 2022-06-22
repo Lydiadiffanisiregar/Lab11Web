@@ -491,7 +491,7 @@ Buat view baru untuk halaman detail dengan nama <strong> app/views/artikel/detai
 <?= $this->include('template/footer'); ?>
 ```
 
-<strong> Membuat Routing untuk artikel detail </strong>
+# Membuat Routing untuk artikel detail
 Buka Kembali file <strong> app/config/Routes.php </strong>, kemudian tambahkan routing untuk artikel
 detail.
 
