@@ -619,7 +619,7 @@ Akses menu admin dengan url http://localhost:8080/admin/artikel
 
 ![foto](foto/29.PNG)
 
-<strong> Menambah Data Artikel </strong>
+# Menambah Data Artikel
 Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method add().
 public function <strong> add() </strong> 
  
