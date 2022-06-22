@@ -715,7 +715,7 @@ Akses browser dengan http://localhost:8080/admin/artikel/edit/1 untuk Mengubah a
 <?= $this->include('template/admin_footer'); ?>
 ```
 
-<strong> Menghapus Data </strong>
+# Menghapus Data
 Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method <strong>delete().</strong>
 
 ![foto](foto/31.PNG)
