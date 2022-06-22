@@ -339,7 +339,7 @@ Kemudian ubah file app/view/about.php seperti berikut.
 
 Selanjutnya refresh tampilan pada alamat http://localhost:8080/about
 
-![foto](foto/18.jpg)
+![foto](foto/18.JPG)
 
 # Pertanyaan dan Tugas
 Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga
