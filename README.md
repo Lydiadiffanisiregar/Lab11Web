@@ -660,7 +660,7 @@ Akses browser dengan http://localhost:8080/admin/artikel/add.
 
 ![foto](foto/30.PNG)
 
-<strong> Mengubah Data </strong>
+# Mengubah Data
 Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method <strong> edit(). </strong>
 
 ```php
