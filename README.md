@@ -351,7 +351,7 @@ sama.
 
 Membuat Database: Studi Kasus Data Artikel
 
-<strong> Membuat Database </strong>
+# Membuat Database
 jalankan apache dan mysql pada Xampp dan membuat database baru dengan nama
 
 ```php
@@ -376,13 +376,13 @@ CREATE TABLE artikel (
 
 ![foto](foto/19.PNG)
 
-<strong> Konfigurasi koneksi database </strong>
+# Konfigurasi koneksi database
 Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan dua cara, yaitu pada file <strong> app/config/database.php </strong> atau menggunakan file <strong> .env </strong>. Pada praktikum ini kita gunakan konfigurasi pada file <strong> .env</strong>. Hapus tanda #.
 
 
 ![foto](foto/20.PNG)
 
-<strong> Membuat Model </strong>
+# Membuat Model
 Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada direktori app/Models dengan nama <strong> ArtikelModel.php </strong>
 
 ```php
@@ -400,7 +400,7 @@ protected $allowedFields = ['judul', 'isi', 'status', 'slug', 'gambar'];
 
 ![foto](foto/21.PNG)
 
-<strong> Membuat Controller </strong>
+# Membuat Controller
 Buat Controller baru dengan nama Artikel.php pada direktori app/Controllers.
 
 ```php
@@ -421,7 +421,7 @@ class Artikel extends BaseController
 
 ![foto](foto/22.PNG)
 
-<strong> Membuat View </strong>
+# Membuat View
 Buat direktori baru dengan nama artikel pada direktori <strong> app/views <strong>, kemudian buat file baru dengan nama <strong> index.php. </strong>
 
 ![foto](foto/23.PNG)
