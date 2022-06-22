@@ -222,7 +222,7 @@ echo "ini halaman Term of Services";
 ```
 
 Method ini belum ada pada routing, sehingga cara mengaksesnya dengan menggunakan
-alamat: http://localhost:8080/page/tos
+alamat: http://localhost/Lab11Web/lab11_php_ci/ci4/public/page/tos
 
 ![foto](foto/15.PNG)
 
@@ -339,7 +339,7 @@ Kemudian ubah file app/view/about.php seperti berikut.
 
 Selanjutnya refresh tampilan pada alamat http://localhost:8080/about
 
-![foto](foto/18.PNG)
+![foto](foto/18.jpg)
 
 # Pertanyaan dan Tugas
 Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga
