@@ -501,7 +501,7 @@ $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 
 ![foto](foto/27.PNG)
 
-<strong> Membuat Menu Admin </strong>
+# Membuat Menu Admin
 Terletak di folder <strong> app/Controller, </strong> edit file <strong> Artikel.php.</strong> Tambah method <strong> admin_index().</strong>
 
 ```php
