@@ -270,7 +270,7 @@ css dan javascript terletak pada direktori public.
 Buat file css pada direktori public dengan nama style.css (copy file dari praktikum
 lab4_layout. Kita akan gunakan layout yang pernah dibuat pada praktikum 4.
 
-![foto](foto/17.PNG)
+![foto](foto/17.png)
 
 Kemudian buat folder template pada direktori view kemudian buat file header.php dan
 footer.php
