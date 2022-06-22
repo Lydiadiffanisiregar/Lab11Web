@@ -10,3 +10,4 @@ public function index()
         $artikel = $model->findAll();
         return view('artikel/index', compact('artikel', 'title'));
     }
+}

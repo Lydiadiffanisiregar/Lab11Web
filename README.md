@@ -377,13 +377,13 @@ CREATE TABLE artikel (
 ![foto](foto/19.PNG)
 
 <strong> Konfigurasi koneksi database </strong>
-Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan dua cara, yaitu pada file app/config/database.php atau menggunakan file .env. Pada praktikum ini kita gunakan konfigurasi pada file .env. Hapus tanda #.
+Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan dua cara, yaitu pada file <strong> app/config/database.php </strong> atau menggunakan file <strong> .env </strong>. Pada praktikum ini kita gunakan konfigurasi pada file <strong> .env</strong>. Hapus tanda #.
 
 
 ![foto](foto/20.PNG)
 
 <strong> Membuat Model </strong>
-Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada direktori app/Models dengan nama ArtikelModel.php
+Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada direktori app/Models dengan nama <strong> ArtikelModel.php </strong>
 
 ```php
 <?php
@@ -422,7 +422,7 @@ class Artikel extends BaseController
 ![foto](foto/22.PNG)
 
 <strong> Membuat View </strong>
-Buat direktori baru dengan nama artikel pada direktori app/views, kemudian buat file baru dengan nama index.php.
+Buat direktori baru dengan nama artikel pada direktori <strong> app/views <strong>, kemudian buat file baru dengan nama <strong> index.php. </strong>
 
 ![foto](foto/23.PNG)
 
@@ -456,7 +456,7 @@ Refresh kembali browser, sehingga akan ditampilkan hasilnya.
 
 <strong> Membuat Tampilan Detail Artikel </strong>
 Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda.
-Tambahkan fungsi baru pada Controller Artikel dengan nama view().
+Tambahkan fungsi baru pada Controller Artikel dengan nama <strong> view(). </strong>
 
 ```php
 public function view($slug)
@@ -477,7 +477,7 @@ public function view($slug)
 ```
 
 <strong> Membuat View Detail </strong>
-Buat view baru untuk halaman detail dengan nama app/views/artikel/detail.php.
+Buat view baru untuk halaman detail dengan nama <strong> app/views/artikel/detail.php. </strong>
 
 ```php
 <?= $this->include('template/header'); ?>
@@ -492,7 +492,7 @@ Buat view baru untuk halaman detail dengan nama app/views/artikel/detail.php.
 ```
 
 <strong> Membuat Routing untuk artikel detail </strong>
-Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artikel
+Buka Kembali file <strong> app/config/Routes.php </strong>, kemudian tambahkan routing untuk artikel
 detail.
 
 ```php
@@ -502,7 +502,7 @@ $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 ![foto](foto/27.PNG)
 
 <strong> Membuat Menu Admin </strong>
-Terletak di folder app/Controller, edit file Artikel.php. Tambah method admin_index().
+Terletak di folder <strong> app/Controller, </strong> edit file <strong> Artikel.php.</strong> Tambah method <strong> admin_index().</strong>
 
 ```php
 public function admin_index()
@@ -515,7 +515,7 @@ return view('artikel/admin_index', compact('artikel', 'title'));
 ```
 ![foto](foto/28.PNG)
 
-Selanjutnya buat view untuk tampilan admin dengan nama admin_index.php
+Selanjutnya buat view untuk tampilan admin dengan nama <strong> admin_index.php </strong>
 
 ```php
 <?= $this->include('template/admin_header'); ?>
@@ -589,7 +589,7 @@ admin_header.php,
                 <section id="main">
 ```
 
-lalu buat juga admin_footer.php dilokasi yang sama dengan yang diatas.
+lalu buat juga <strong> admin_footer.php </strong> dilokasi yang sama dengan yang diatas.
 
  ```php
                 </section>
@@ -613,15 +613,15 @@ $routes->group('admin', function($routes) {
 });
 ```
 
-![foto](foto/29.PNG)
+![foto](foto/28.PNG)
 
 Akses menu admin dengan url http://localhost:8080/admin/artikel
 
-![foto](foto/30.PNG)
+![foto](foto/29.PNG)
 
 <strong> Menambah Data Artikel </strong>
-Terletak di folder app/Controller, edit file Artikel.php. Tambah method add().
-public function add() 
+Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method add().
+public function <strong> add() </strong> 
  
 ```php
     {
@@ -644,7 +644,7 @@ public function add()
         return view('artikel/form_add', compact('title'));
     }
 ```
-Akses kembali folder app/Views/artikel, buat file form_add.php.
+Akses kembali folder <strong> app/Views/artikel,</strong> buat file <strong> form_add.php. </strong>
 
 ```php
 <?= $this->include('template/admin_header'); ?>
@@ -658,10 +658,10 @@ Akses kembali folder app/Views/artikel, buat file form_add.php.
 ```
 Akses browser dengan http://localhost:8080/admin/artikel/add.
 
-![foto](foto/31.PNG)
+![foto](foto/30.PNG)
 
 <strong> Mengubah Data </strong>
-Terletak di folder app/Controller, edit file Artikel.php. Tambah method edit().
+Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method <strong> edit(). </strong>
 
 ```php
 public function edit($id) 
@@ -689,7 +689,7 @@ public function edit($id)
     }
 ```
 
-Akses kembali folder app/Views/artikel, buat file form_edit.php.
+Akses kembali folder <strong> app/Views/artikel,<strong> buat file <strong> form_edit.php. </strong>
 
 ```php
 <?= $this->include('template/admin_header'); ?>
@@ -718,7 +718,12 @@ Akses browser dengan http://localhost:8080/admin/artikel/edit/1 untuk Mengubah a
 <strong> Menghapus Data </strong>
 Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method <strong>delete().</strong>
 
+![foto](foto/31.PNG)
+
+Akses browser dengan http://localhost:8080/admin/artikel/add untuk membuat artikel ketiga, lalu kirim.
+
 ![foto](foto/32.PNG)
+
 
 Untuk mengeceknya ketik di url, http://localhost:8080/artikel kemudian enter.
 
