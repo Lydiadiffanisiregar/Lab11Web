@@ -476,7 +476,7 @@ public function view($slug)
 }
 ```
 
-# Membuat View Detail
+# Membuat View Pada Detail
 Buat view baru untuk halaman detail dengan nama <strong> app/views/artikel/detail.php. </strong>
 
 ```php
