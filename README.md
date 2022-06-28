@@ -738,7 +738,7 @@ Artikel berhasil dihapus.
 
 
 # Praktikum 13: Framework Lanjutan (Modul Login)
-1. Membuat Table User
+<strong> Membuat Table User </strong>
 Jalankan Apache, MySql pada Xampp, Akses browser http://localhost/phpmyadmin.
 Buat tabel dengan nama artikel.
 
