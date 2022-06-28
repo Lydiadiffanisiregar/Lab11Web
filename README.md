@@ -751,7 +751,7 @@ Artikel berhasil dihapus.
     ```
 
 <strong> <p>Membuat Model User</p> </strong>
-Selanjutnya adalah membuat Model untuk memproses data Login. Buat file baru pada direktori app/Models dengan nama UserModel.php
+Selanjutnya adalah membuat Model untuk memproses data Login. Buat file baru pada direktori <strong>app/Models</strong> dengan nama <strong>UserModel.php</strong>
 
 ```php
 <?php
@@ -770,7 +770,7 @@ class UserModel extends Model
 ```
 
 <strong> <p>Membuat Controller User</p> </strong>
-Buat Controller baru dengan nama User.php pada direktori app/Controllers. Kemudian tambahkan method index() untuk menampilkan daftar user, dan method login() untuk proses login.
+Buat Controller baru dengan nama <strong>User.php</strong> pada direktori app/Controllers. Kemudian tambahkan method <strong>index()</strong> untuk menampilkan daftar user, dan method <strong>login()</strong> untuk proses login.
 
 ```php
 <?php
@@ -823,7 +823,7 @@ class User extends BaseController
 ```
 
 <strong> <p>Membuat View Login</p> </strong>
-Buat direktori baru dengan nama user pada direktori app/views, kemudian buat file baru dengan nama login.php.
+Buat direktori baru dengan nama user pada direktori <strong>app/views</strong>, kemudian buat file baru dengan nama <strong>login.php.</strong>
 
 ```php
 <!DOCTYPE html>
@@ -896,7 +896,7 @@ Selanjutnya buka kembali CLI dan ketik perintah berikut: ```php php spark db:see
 ![foto](foto/v.PNG)
 
 <strong> <p>Menambahkan Auth Filter</p> </strong>
-Selanjutnya membuat filer untuk halaman admin. Buat file baru dengan nama ```php Auth.php ``` pada direktori ```php app/Filters.```
+Selanjutnya membuat filer untuk halaman admin. Buat file baru dengan nama <strong>Auth.php</strong> pada direktori <strong>app/Filters.</strong>
 
 ```php
 <?php namespace App\Filters;
@@ -952,36 +952,7 @@ public function logout()
  # Praktikum 14: Pagination dan Pencarian
  <strong> <p>Langkah-langkah Praktikum</p> </strong>
 <strong> <p>Membuat Pagination</p> </strong>
-Untuk membuat pagination, buka Kembali Controller Artikel, kemudian modifikasi kode pada method ```php admin_index``` seperti berikut.
-
-```php
-public function admin_index()
-    {
-        $title = 'Daftar Artikel';
-        $q = $this->request->getVar('q') ?? '';
-        $model = new ArtikelModel();
-        $data = [
-            'title' => $title,
-            'q' => $q,
-            'artikel' => $model->like('judul', $q)->paginate(10), # data dibatasi 10 record per halaman
-            'pager' => $model->pager,
-        ];
-        return view('artikel/admin_index', $data);
-    }
-    ```
-
-Kemudian buka file views/artikel/admin_index.php dan tambahkan kode berikut dibawah deklarasi tabel data.
-
-```php <?= $pager->links(); ?> ```
-
-Selanjutnya buka kembali menu daftar artikel, tambahkan data lagi untuk melihat hasilnya.
-
-![foto](foto/v.PNG)
-
-<strong> <p>Membuat Pencarian<strong> <p>
-<p>Pencarian data digunakan untuk memfilter data.</p>
-
-<p>Untuk membuat pencarian data, buka kembali Controller Artikel, pada method admin_index ubah kodenya seperti berikut.</p>
+Untuk membuat pagination, buka Kembali Controller Artikel, kemudian modifikasi kode pada method <strong>admin_index</strong> seperti berikut.
 
 ```php
 public function admin_index()
@@ -999,7 +970,36 @@ public function admin_index()
     }
 ```
 
-Kemudian buka kembali file views/artikel/admin_index.php dan tambahkan form pencarian sebelum deklarasi tabel seperti berikut:
+Kemudian buka file <strong>views/artikel/admin_index.php</strong> dan tambahkan kode berikut dibawah deklarasi tabel data.
+
+```php <?= $pager->links(); ?> ```
+
+Selanjutnya buka kembali menu daftar artikel, tambahkan data lagi untuk melihat hasilnya.
+
+![foto](foto/v.PNG)
+
+<strong> <p>Membuat Pencarian<strong> <p>
+<p>Pencarian data digunakan untuk memfilter data.</p>
+
+<p>Untuk membuat pencarian data, buka kembali Controller Artikel, pada method <strong>admin_index</strong> ubah kodenya seperti berikut.</p>
+
+```php
+public function admin_index()
+    {
+        $title = 'Daftar Artikel';
+        $q = $this->request->getVar('q') ?? '';
+        $model = new ArtikelModel();
+        $data = [
+            'title' => $title,
+            'q' => $q,
+            'artikel' => $model->like('judul', $q)->paginate(10), # data dibatasi 10 record per halaman
+            'pager' => $model->pager,
+        ];
+        return view('artikel/admin_index', $data);
+    }
+```
+
+Kemudian buka kembali file <strong>views/artikel/admin_index.php</strong> dan tambahkan form pencarian sebelum deklarasi tabel seperti berikut:
 
 ```php
 <form method="get" class="form-search">
@@ -1012,12 +1012,12 @@ Dan pada link pager ubah seperti berikut.
 
 ```php <?= $pager->only(['q'])->links(); ?> ```
 
-Selanjutnya ujicoba dengan membuka kembali halaman admin artikel, masukkan kata kunci tertentu pada form pencarian.
+Selanjutnya uji coba dengan membuka kembali halaman admin artikel, masukkan kata kunci tertentu pada form pencarian.
 
 ![foto](foto/v.PNG)
 
 <strong> <p>Upload Gambar<strong> <p>
-Menambahkan fungsi unggah gambar pada tambah artikel. Buka kembali Controller <strong>Artikel</strong>, sesuaikan kode pada method <strong>add</strong> seperti berikut:
+Menambahkan fungsi unggah gambar pada tambah artikel. Buka kembali <strong>Controller Artikel</strong>, sesuaikan kode pada method <strong>add</strong> seperti berikut:
 
 ```php
 public function add()
@@ -1043,7 +1043,7 @@ public function add()
     }
 ```
 
-Kemudian pada file views/artikel/form_add.php tambahkan field input file seperti berikut.
+Kemudian pada file <strong>views/artikel/form_add.php</strong> tambahkan field input file seperti berikut.
 
 ```php
  <p>
