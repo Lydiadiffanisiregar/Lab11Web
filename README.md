@@ -593,7 +593,7 @@ lalu buat juga <strong> admin_footer.php </strong> dilokasi yang sama dengan yan
                 </section>
             </section>
             <footer>
-                <p>&copy; 2022 - Universitas Pelita Bangsa</p>
+                <p>&copy; 2022 - Lydia_Diffani</p>
             </footer>
         </div>
     </body>
