@@ -739,8 +739,6 @@ Artikel berhasil dihapus.
 
 # Praktikum 13: Framework Lanjutan (Modul Login)
 <strong> <p>Membuat Table User</p> </strong>
-Jalankan Apache, MySql pada Xampp, Akses browser http://localhost/phpmyadmin.
-<p>Buat tabel dengan nama artikel.</p>
 
     ```php
     CREATE TABLE user (
@@ -752,3 +750,313 @@ Jalankan Apache, MySql pada Xampp, Akses browser http://localhost/phpmyadmin.
     );
     ```
 
+<strong> <p>Membuat Model User</p> </strong>
+Selanjutnya adalah membuat Model untuk memproses data Login. Buat file baru pada direktori app/Models dengan nama UserModel.php
+
+```php
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class UserModel extends Model
+{
+    protected $table = 'user';
+    protected $primaryKey = 'id';
+    protected $useAutoIncrement = true;
+    protected $allowedFields = ['username', 'useremail', 'userpassword'];
+}
+```
+
+<strong> <p>Membuat Controller User</p> </strong>
+Buat Controller baru dengan nama User.php pada direktori app/Controllers. Kemudian tambahkan method index() untuk menampilkan daftar user, dan method login() untuk proses login.
+
+```php
+<?php
+
+namespace App\Controllers;
+
+use App\Models\UserModel;
+
+class User extends BaseController
+{
+    public function index()
+    {
+        $title = 'Daftar User';
+        $model = new UserModel();
+        $users = $model->findAll();
+        return view('user/index', compact('users', 'title'));
+    }
+    public function login()
+    {
+        helper(['form']);
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        if (!$email) {
+            return view('user/login');
+        }
+        $session = session();
+        $model = new UserModel();
+        $login = $model->where('useremail', $email)->first();
+        if ($login) {
+            $pass = $login['userpassword'];
+            if (password_verify($password, $pass)) {
+                $login_data = [
+                    'user_id' => $login['id'],
+                    'user_name' => $login['username'],
+                    'user_email' => $login['useremail'],
+                    'logged_in' => TRUE,
+                ];
+                $session->set($login_data);
+                return redirect('admin/artikel');
+            } else {
+                $session->setFlashdata("flash_msg", "Password salah.");
+                return redirect()->to('/user/login');
+            }
+        } else {
+            $session->setFlashdata("flash_msg", "email tidak terdaftar.");
+            return redirect()->to('/user/login');
+        }
+    }
+}
+```
+
+<strong> <p>Membuat View Login</p> </strong>
+Buat direktori baru dengan nama user pada direktori app/views, kemudian buat file baru dengan nama login.php.
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="<?= base_url('/style.css'); ?>">
+</head>
+
+<body>
+    <div id="login-wrapper">
+        <h1>Sign In</h1>
+        <?php if (session()->getFlashdata('flash_msg')) : ?>
+            <div class="alert alert-danger"><?=
+                                            session()->getFlashdata('flash_msg') ?></div>
+        <?php endif; ?>
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="InputForEmail" class="form-label">Email
+                    address</label>
+                <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
+            </div>
+            <div class="mb-3">
+                <label for="InputForPassword" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="InputForPassword">
+            </div>
+            <button type="submit" class="btn
+btn-primary">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
+```
+
+<strong> <p>Membuat Database Seeder</p> </strong>
+Database seeder digunakan untuk membuat data dummy. Untuk keperluan ujicoba modul login, kita perlu memasukkan data user dan password kedaalam database. Untuk itu buat database seeder untuk tabel user. Buka CLI, kemudian tulis perintah berikut:
+
+```php php spark make:seeder UserSeeder```
+
+![foto](foto/v.PNG)
+
+Selanjutnya, buka file UserSeeder.php yang berada di lokasi direktori /app/Database/Seeds/UserSeeder.php kemudian isi dengan kode berikut:
+
+```php
+<?php
+
+namespace App\Database\Seeds;
+
+use CodeIgniter\Database\Seeder;
+
+class UserSeeder extends Seeder
+{
+    public function run()
+    {
+        $model = model('UserModel');
+        $model->insert([
+            'username' => 'admin',
+            'useremail' => 'admin@email.com',
+            'userpassword' => password_hash('admin123', PASSWORD_DEFAULT),
+        ]);
+    }
+}
+```
+
+Selanjutnya buka kembali CLI dan ketik perintah berikut: ```php php spark db:seed UserSeeder```
+
+![foto](foto/v.PNG)
+
+<strong> <p>Menambahkan Auth Filter</p> </strong>
+Selanjutnya membuat filer untuk halaman admin. Buat file baru dengan nama ```php Auth.php ``` pada direktori ```php app/Filters.```
+
+```php
+<?php namespace App\Filters;
+use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\HTTP\ResponseInterface;
+use CodeIgniter\Filters\FilterInterface;
+class Auth implements FilterInterface
+{
+public function before(RequestInterface $request, $arguments = null)
+{
+// jika user belum login
+if(! session()->get('logged_in')){
+// maka redirct ke halaman login
+return redirect()->to('/user/login');
+}
+}
+public function after(RequestInterface $request, ResponseInterface
+$response, $arguments = null)
+{
+// Do something here
+}
+}
+```
+
+Selanjutnya buka file ```php app/Config/Filters.php``` tambahkan kode berikut: ```php 'auth' => App\Filters\Auth::class```
+
+```php
+public $aliases = [
+        'csrf'          => CSRF::class,
+        'toolbar'       => DebugToolbar::class,
+        'honeypot'      => Honeypot::class,
+        'invalidchars'  => InvalidChars::class,
+        'secureheaders' => SecureHeaders::class,
+        'auth'          => App\Filters\Auth::class,
+    ];
+```
+
+Selanjutnya buka file ```php app/Config/Routes.php``` dan sesuaikan kodenya.
+
+<strong> <p>Fungsi Logout</p> </strong>
+Tambahkan method logout pada Controller User seperti berikut:
+
+```php
+public function logout()
+ {
+ session()->destroy();
+ return redirect()->to('/user/login');
+ }
+ ```
+
+
+
+ # Praktikum 14: Pagination dan Pencarian
+ <strong> <p>Langkah-langkah Praktikum</p> </strong>
+<strong> <p>Membuat Pagination</p> </strong>
+Untuk membuat pagination, buka Kembali Controller Artikel, kemudian modifikasi kode pada method ```php admin_index``` seperti berikut.
+
+```php
+public function admin_index()
+    {
+        $title = 'Daftar Artikel';
+        $q = $this->request->getVar('q') ?? '';
+        $model = new ArtikelModel();
+        $data = [
+            'title' => $title,
+            'q' => $q,
+            'artikel' => $model->like('judul', $q)->paginate(10), # data dibatasi 10 record per halaman
+            'pager' => $model->pager,
+        ];
+        return view('artikel/admin_index', $data);
+    }
+    ```
+
+Kemudian buka file views/artikel/admin_index.php dan tambahkan kode berikut dibawah deklarasi tabel data.
+
+```php <?= $pager->links(); ?> ```
+
+Selanjutnya buka kembali menu daftar artikel, tambahkan data lagi untuk melihat hasilnya.
+
+![foto](foto/v.PNG)
+
+<strong> <p>Membuat Pencarian<strong> <p>
+<p>Pencarian data digunakan untuk memfilter data.</p>
+
+<p>Untuk membuat pencarian data, buka kembali Controller Artikel, pada method admin_index ubah kodenya seperti berikut.</p>
+
+```php
+public function admin_index()
+    {
+        $title = 'Daftar Artikel';
+        $q = $this->request->getVar('q') ?? '';
+        $model = new ArtikelModel();
+        $data = [
+            'title' => $title,
+            'q' => $q,
+            'artikel' => $model->like('judul', $q)->paginate(10), # data dibatasi 10 record per halaman
+            'pager' => $model->pager,
+        ];
+        return view('artikel/admin_index', $data);
+    }
+```
+
+Kemudian buka kembali file views/artikel/admin_index.php dan tambahkan form pencarian sebelum deklarasi tabel seperti berikut:
+
+```php
+<form method="get" class="form-search">
+ <input type="text" name="q" value="<?= $q; ?>" placeholder="Cari data">
+ <input type="submit" value="Cari" class="btn btn-primary">
+</form>
+```
+
+Dan pada link pager ubah seperti berikut.
+
+```php <?= $pager->only(['q'])->links(); ?> ```
+
+Selanjutnya ujicoba dengan membuka kembali halaman admin artikel, masukkan kata kunci tertentu pada form pencarian.
+
+![foto](foto/v.PNG)
+
+<strong> <p>Upload Gambar<strong> <p>
+Menambahkan fungsi unggah gambar pada tambah artikel. Buka kembali Controller <strong>Artikel</strong>, sesuaikan kode pada method <strong>add</strong> seperti berikut:
+
+```php
+public function add()
+    {
+        // validasi data.
+        $validation = \Config\Services::validation();
+        $validation->setRules(['judul' => 'required']);
+        $isDataValid = $validation->withRequest($this->request)->run();
+        if ($isDataValid) {
+            $file = $this->request->getFile('gambar');
+            $file->move(ROOTPATH . 'public/gambar');
+            $artikel = new ArtikelModel();
+            $artikel->insert([
+                'judul' => $this->request->getPost('judul'),
+                'isi' => $this->request->getPost('isi'),
+                'slug' => url_title($this->request->getPost('judul')),
+                'gambar' => $file->getName(),
+            ]);
+            return redirect('admin/artikel');
+        }
+        $title = "Tambah Artikel";
+        return view('artikel/form_add', compact('title'));
+    }
+```
+
+Kemudian pada file views/artikel/form_add.php tambahkan field input file seperti berikut.
+
+```php
+ <p>
+    <input type="file" name="gambar">
+ </p>
+ ```
+
+ Dan sesuaikan tag form dengan menambahkan ecrypt type seperti berikut.
+
+ ```php
+ <form action="" method="post" enctype="multipart/form-data">
+ ```
+
+ Uji coba file upload dengan mengakses menu tambah artikel
+
+ ![foto](foto/v.PNG)
