@@ -493,20 +493,17 @@ Buat view baru untuk halaman detail dengan nama <strong> app/views/artikel/detai
 
 # Membuat Routing untuk artikel detail
 Terletak di folder ```php app/Config```, edit file ```php Routes.php```.
-Buka Kembali file <strong> app/config/Routes.php </strong>, kemudian tambahkan routing untuk artikel
-detail.
-
-```php
-$routes->get('/artikel/(:any)', 'Artikel::view/$1');
-```
-
 ![foto](foto/27.PNG)
 
+Klik Artikel Kedua pada http://localhost:8080/artikel, untuk pindah ke detailnya.
+
+![foto](foto/30.PNG)
+
 # Membuat Menu Admin
-Terletak di folder <strong> app/Controller, </strong> edit file <strong> Artikel.php.</strong> Tambah method <strong> admin_index().</strong>
+Terletak di folder <strong> ```php app/Controller```, </strong> edit file <strong> ```php Artikel.php```.</strong> Tambah method <strong> ```php admin_index()```.</strong>
 
 ```php
-public function admin_index()
+public function ```php admin_index()```
 {
 $title = 'Daftar Artikel';
 $model = new ArtikelModel();
@@ -516,7 +513,7 @@ return view('artikel/admin_index', compact('artikel', 'title'));
 ```
 ![foto](foto/28.PNG)
 
-Selanjutnya buat view untuk tampilan admin dengan nama <strong> admin_index.php </strong>
+Selanjutnya buat view untuk tampilan admin dengan nama <strong> ```php admin_index.php``` </strong>
 
 ```php
 <?= $this->include('template/admin_header'); ?>
