@@ -492,6 +492,7 @@ Buat view baru untuk halaman detail dengan nama <strong> app/views/artikel/detai
 ```
 
 # Membuat Routing untuk artikel detail
+Terletak di folder ```php app/Config```, edit file ```php Routes.php```.
 Buka Kembali file <strong> app/config/Routes.php </strong>, kemudian tambahkan routing untuk artikel
 detail.
 
