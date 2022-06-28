@@ -560,9 +560,9 @@ Selanjutnya buat view untuk tampilan admin dengan nama <strong> ```php admin_ind
 <?= $this->include('template/admin_footer'); ?>
 ```
 
-Buka folder yang ada di app/Views/artikel/template, kemudian buat:
+Buka folder yang ada di ```php app/Views/artikel/template```, kemudian buat:
 
-admin_header.php,
+```php admin_header.php```,
 ```php
 <!DOCTYPE html>
 <html lang="en">
@@ -618,8 +618,8 @@ Akses menu admin dengan url http://localhost:8080/admin/artikel
 ![foto](foto/29.PNG)
 
 # Menambah Data Artikel
-Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method add().
-public function <strong> add() </strong> 
+Terletak di folder <strong> ```php app/Controller```,</strong> edit file <strong> ```php Artikel.php```.</strong> Tambah method add().
+public function <strong> ```php add()``` </strong> 
  
 ```php
     {
@@ -642,7 +642,7 @@ public function <strong> add() </strong>
         return view('artikel/form_add', compact('title'));
     }
 ```
-Akses kembali folder <strong> app/Views/artikel,</strong> buat file <strong> form_add.php. </strong>
+Akses kembali folder <strong> ```php app/Views/artikel```,</strong> buat file <strong> ```php form_add.php.``` </strong>
 
 ```php
 <?= $this->include('template/admin_header'); ?>
@@ -658,7 +658,7 @@ Akses browser dengan http://localhost:8080/admin/artikel/add.
 
 ![foto](foto/30.PNG)
 
-# Mengubah Data
+# Mengubah Data Pada Artikel
 Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method <strong> edit(). </strong>
 
 ```php
@@ -713,7 +713,7 @@ Akses browser dengan http://localhost:8080/admin/artikel/edit/1 untuk Mengubah a
 <?= $this->include('template/admin_footer'); ?>
 ```
 
-# Menghapus Data
+# Menghapus Data Pada Artikel
 Terletak di folder <strong> app/Controller,</strong> edit file <strong> Artikel.php.</strong> Tambah method <strong>delete().</strong>
 
 ![foto](foto/31.PNG)
@@ -735,9 +735,20 @@ Artikel berhasil dihapus.
 
 ![foto](foto/35.PNG)
 
-# Pertanyaan dan Tugas
-Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan
-improvisasi.
 
 
 # Praktikum 13: Framework Lanjutan (Modul Login)
+1. Membuat Table User
+Jalankan Apache, MySql pada Xampp, Akses browser http://localhost/phpmyadmin.
+Buat tabel dengan nama artikel.
+
+    ```php
+    CREATE TABLE user (
+    id INT(11) auto_increment,
+    username VARCHAR(200) NOT NULL,
+    useremail VARCHAR(200),
+    userpassword VARCHAR(200),
+    PRIMARY KEY(id)
+    );
+    ```
+
