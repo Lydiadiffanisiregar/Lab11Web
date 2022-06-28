@@ -8,9 +8,3 @@ class ArtikelModel extends Model
     protected $useAutoIncrement = true;
     protected $allowedFields = ['judul', 'isi', 'status', 'slug', 'gambar'];
 }
-        $title = 'Daftar Artikel';
-        $model = new ArtikelModel();
-        $artikel = $model->findAll();
-        return view('artikel/index', compact('artikel', 'title'));
-    }
-}

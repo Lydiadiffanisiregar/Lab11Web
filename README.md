@@ -347,7 +347,7 @@ semua link pada navigasi header dapat menampilkan tampilan dengan layout yang
 sama.
 
 
-## Praktikum 12: Framework Lanjutan (CRUD)
+# Praktikum 12: Framework Lanjutan (CRUD)
 
 Membuat Database: Studi Kasus Data Artikel
 
@@ -374,7 +374,7 @@ CREATE TABLE artikel (
 );
 ```
 
-![foto](foto/19.PNG)
+![foto](foto/19.PNG)s
 
 # Konfigurasi koneksi database
 Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan dua cara, yaitu pada file <strong> app/config/database.php </strong> atau menggunakan file <strong> .env </strong>. Pada praktikum ini kita gunakan konfigurasi pada file <strong> .env</strong>. Hapus tanda #.
