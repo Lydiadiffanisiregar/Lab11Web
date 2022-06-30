@@ -1,7 +1,7 @@
                 </section>
             </section>
             <footer>
-                <p>&copy; 2022 - Universitas Pelita Bangsa</p>
+                <p>&copy; 2022 - Lydia_Diffani</p>
             </footer>
         </div>
     </body>

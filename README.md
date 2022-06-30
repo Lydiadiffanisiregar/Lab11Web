@@ -740,15 +740,13 @@ Artikel berhasil dihapus.
 # Praktikum 13: Framework Lanjutan (Modul Login)
 <strong> <p>Membuat Table User</p> </strong>
 
-    ```php
-    CREATE TABLE user (
-    id INT(11) auto_increment,
-    username VARCHAR(200) NOT NULL,
-    useremail VARCHAR(200),
-    userpassword VARCHAR(200),
-    PRIMARY KEY(id)
-    );
-    ```
+```php CREATE TABLE user (
+id INT(11) auto_increment,
+username VARCHAR(200) NOT NULL,
+useremail VARCHAR(200),
+userpassword VARCHAR(200),
+PRIMARY KEY(id)
+);```
 
 <strong> <p>Membuat Model User</p> </strong>
 Selanjutnya adalah membuat Model untuk memproses data Login. Buat file baru pada direktori <strong>app/Models</strong> dengan nama <strong>UserModel.php</strong>
