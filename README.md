@@ -866,7 +866,7 @@ Database seeder digunakan untuk membuat data dummy. Untuk keperluan ujicoba modu
 
 ```php php spark make:seeder UserSeeder```
 
-![foto](foto/v.PNG)
+![foto](foto/UserSeeder.PNG)
 
 Selanjutnya, buka file UserSeeder.php yang berada di lokasi direktori /app/Database/Seeds/UserSeeder.php kemudian isi dengan kode berikut:
 
